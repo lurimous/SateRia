@@ -6,7 +6,6 @@
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
   font-family: var(--font-body);
@@ -133,6 +132,8 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .site-header__inner { display: flex; align-items: center; gap: var(--space-6); min-height: 72px; }
 
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-size: var(--fs-24); }
+.brand__logo { height: 46px; width: auto; display: block; }
+.footer-logo { height: 78px; width: auto; display: block; }
 .brand__mark {
   display: grid; place-items: center; width: 40px; height: 40px;
   background: var(--color-ink); color: var(--color-gold); border-radius: 11px;
@@ -169,7 +170,7 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .nav-toggle span { width: 22px; height: 2px; background: var(--color-ink); border-radius: 2px; transition: transform var(--dur) var(--ease-out), opacity var(--dur); }
 
 /* ---------- Footer ---------- */
-.site-footer { position: relative; z-index: 2; background: var(--color-ink); color: var(--color-fg-on-dark); padding-top: var(--space-16); margin-top: var(--space-8); }
+.site-footer { position: relative; z-index: 2; background: var(--color-ink); color: var(--color-fg-on-dark); padding-top: var(--space-16); }
 .site-footer__inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-10); padding-bottom: var(--space-12); }
 .site-footer .brand { color: var(--color-fg-on-dark); font-size: var(--fs-32); }
 .site-footer__tag { margin-top: var(--space-4); max-width: 32ch; color: var(--color-fg-on-dark-mut); }
@@ -303,6 +304,15 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .person__name { font-size: var(--fs-20); }
 .person__role { font-size: var(--fs-14); color: var(--color-text-muted); margin-top: 0.2rem; }
 
+/* ---------- Heritage gallery ---------- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--space-4); }
+.gallery__item { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--color-border); aspect-ratio: 4 / 3; background: var(--color-ink-2); box-shadow: var(--shadow-sm); }
+.gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease-out); }
+.gallery__item:hover img { transform: scale(1.06); }
+.gallery__item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(28,25,23,0.35)); opacity: 0; transition: opacity var(--dur); }
+.gallery__item:hover::after { opacity: 1; }
+@media (max-width: 520px) { .gallery { grid-template-columns: 1fr 1fr; } }
+
 /* ---------- Quote / heritage ---------- */
 .pullquote { position: relative; max-width: 46rem; margin-inline: auto; text-align: center; }
 .pullquote svg { width: 2.6rem; height: 2.6rem; color: var(--color-gold-soft); opacity: 0.5; margin: 0 auto var(--space-4); }
@@ -334,7 +344,6 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .sk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: 3rem; }
 .sk--card { height: 220px; }
 @keyframes sk { to { background-position: -200% 0; } }
-@media (prefers-reduced-motion: reduce) { .sk { animation: none; } }
 
 /* ---------- Route error / 404 ---------- */
 .route-error { text-align: center; padding-block: clamp(4rem, 3rem + 8vw, 8rem); display: grid; gap: var(--space-4); place-items: center; }
@@ -348,9 +357,74 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 [data-reveal][data-delay="2"] { transition-delay: 0.16s; }
 [data-reveal][data-delay="3"] { transition-delay: 0.24s; }
 [data-reveal][data-delay="4"] { transition-delay: 0.32s; }
-@media (prefers-reduced-motion: reduce) {
-  [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .btn, .card, .nav__link::after { transition: none; }
+[data-reveal][data-delay="5"] { transition-delay: 0.40s; }
+
+/* ==========================================================================
+   Motion — animations forced on regardless of prefers-reduced-motion
+   (per project request). Remove this banner + restore the media query at the
+   bottom of this file to return to the accessible default.
+   ========================================================================== */
+
+/* Route container enter — plays on every navigation */
+.route-enter { animation: routeIn 0.55s var(--ease-out) both; }
+@keyframes routeIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.995); filter: blur(2px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+
+/* Hero: slow ken-burns drift + breathing ember glow */
+.hero__bg img { animation: kenburns 22s ease-in-out infinite alternate; transform-origin: 60% 40%; }
+@keyframes kenburns {
+  from { transform: scale(1.04) translate3d(0, 0, 0); }
+  to   { transform: scale(1.13) translate3d(-1.5%, -2%, 0); }
+}
+.hero__bg::after { animation: emberGlow 7s ease-in-out infinite alternate; }
+@keyframes emberGlow {
+  from { opacity: 0.92; }
+  to   { opacity: 1; background-position: 52% 12%, 8% 88%, 0 0; }
+}
+
+/* First-load brand + nav drop-in */
+.site-header .brand { animation: dropIn 0.6s var(--ease-out) both; }
+.nav__link { animation: dropIn 0.6s var(--ease-out) both; }
+.header-actions { animation: dropIn 0.6s var(--ease-out) both; }
+.nav__link:nth-child(1) { animation-delay: 0.05s; }
+.nav__link:nth-child(2) { animation-delay: 0.10s; }
+.nav__link:nth-child(3) { animation-delay: 0.15s; }
+.nav__link:nth-child(4) { animation-delay: 0.20s; }
+.header-actions { animation-delay: 0.24s; }
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Gold buttons: travelling sheen on hover */
+.btn--gold { position: relative; overflow: hidden; }
+.btn--gold::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
+  transform: translateX(-130%); transition: transform 0.7s var(--ease-out);
+}
+.btn--gold:hover::after { transform: translateX(130%); }
+
+/* Card icons gently lift + warm on card hover */
+.card__icon { transition: transform var(--dur) var(--ease-out), background var(--dur); }
+.card:hover .card__icon { transform: translateY(-3px) rotate(-4deg) scale(1.06); }
+
+/* Flow connector arrows pulse along the line */
+.flow__step::after { animation: arrowPulse 2.2s var(--ease-out) infinite; }
+@keyframes arrowPulse {
+  0%, 100% { opacity: 0.4; transform: translateY(-50%) translateX(0) rotate(45deg); }
+  50%      { opacity: 1;   transform: translateY(-50%) translateX(3px) rotate(45deg); }
+}
+
+/* Stat numbers settle with a subtle pop when revealed */
+.stat__num { transition: transform var(--dur) var(--ease-out); }
+[data-reveal].is-in .stat__num { animation: pop 0.5s var(--ease-out) both; }
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); }
 }
 
 /* ---------- Utilities ---------- */

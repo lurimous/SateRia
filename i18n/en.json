@@ -12,7 +12,7 @@
   },
   "footer": {
     "tagline": "Malaysia's iconic satay brand — reborn for a global table.",
-    "owner": "Brand & secret recipe owned by Ungku Mohammed Fadli Bin Ungku Jalil. Promoted by NNF Global.",
+    "owner": "Brand & secret recipe owned by YM Ungku Mohammed Fadli Bin Ungku Jalil. Exclusively promoted by Dato' Seri Farid Ibrahim (NNF Global).",
     "explore": "Explore",
     "reach": "Reach us",
     "rights": "© 2025–2028 Saté Ria. All rights reserved.",
@@ -45,7 +45,8 @@
     "p1": "Wholly-owned brand & secret recipe with full IP control",
     "p2": "Proven at high-footfall events including the F1 Grand Prix, Sepang",
     "p3": "Deployed across food truck, kiosk, and food-court formats",
-    "link": "Read the full story"
+    "link": "Read the full story",
+    "galLink": "Explore our heritage"
   },
   "formats": {
     "eyebrow": "Franchise formats",
@@ -133,13 +134,16 @@
     "quoteCite": "The Saté Ria revival philosophy",
     "leadEyebrow": "Leadership",
     "leadTitle": "The people behind the revival",
-    "boName": "Ungku Mohammed Fadli Bin Ungku Jalil",
-    "boRole": "Brand & Secret Recipe Owner",
+    "boName": "YM Ungku Mohammed Fadli Bin Ungku Jalil",
+    "boRole": "Brand & Secret Recipe Owner (BO)",
     "promoterName": "Dato' Seri Farid Ibrahim",
-    "promoterRole": "Exclusive Promoter — NNF Global",
+    "promoterRole": "Exclusive Promoter — appointed by the Brand Owner",
     "partnerName": "NNF Global",
     "partnerRole": "Exclusive promotion & expansion partner",
     "inspired": "Inspired by Tun Dr Mahathir Mohamad.",
+    "galEyebrow": "A legacy endorsed",
+    "galTitle": "In conversation with Tun Dr Mahathir Mohamad",
+    "galCaption": "Archival meeting with Tun Dr Mahathir Mohamad, 2008.",
     "projEyebrow": "Financial projections",
     "projTitle": "Where the revival is headed",
     "ctaTitle": "Be part of the next chapter",

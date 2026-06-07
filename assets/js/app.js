@@ -6,7 +6,11 @@
 (function () {
   "use strict";
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // NOTE: animations are intentionally forced ON regardless of the user's
+  // prefers-reduced-motion setting (per project request). To restore the
+  // accessible default, change this back to:
+  //   window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  var reduceMotion = false;
 
   /* ---- Inline the SVG sprite so <use href="#icon-*"> resolves ---- */
   function loadSprite() {
@@ -108,8 +112,13 @@
 
   /* ---- After each route render ---- */
   document.addEventListener("route:rendered", function () {
-    revealIn(document.getElementById("main"));
-    initCounters(document.getElementById("main"));
+    var main = document.getElementById("main");
+    // restart the container enter animation on every navigation
+    main.classList.remove("route-enter");
+    void main.offsetWidth; // force reflow so the animation re-triggers
+    main.classList.add("route-enter");
+    revealIn(main);
+    initCounters(main);
   });
 
   /* ---- Boot ---- */

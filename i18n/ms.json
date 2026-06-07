@@ -12,7 +12,7 @@
   },
   "footer": {
     "tagline": "Jenama satay ikonik Malaysia — dilahirkan semula untuk pentas global.",
-    "owner": "Jenama & resipi rahsia dimiliki oleh Ungku Mohammed Fadli Bin Ungku Jalil. Dipromosikan oleh NNF Global.",
+    "owner": "Jenama & resipi rahsia dimiliki oleh YM Ungku Mohammed Fadli Bin Ungku Jalil. Dipromosikan secara eksklusif oleh Dato' Seri Farid Ibrahim (NNF Global).",
     "explore": "Terokai",
     "reach": "Hubungi kami",
     "rights": "© 2025–2028 Saté Ria. Hak cipta terpelihara.",
@@ -45,7 +45,8 @@
     "p1": "Jenama & resipi rahsia milik penuh dengan kawalan IP sepenuhnya",
     "p2": "Terbukti di acara berasaskan tinggi termasuk F1 Grand Prix, Sepang",
     "p3": "Dikembangkan merentas format trak makanan, kiosk, dan medan selera",
-    "link": "Baca kisah penuh"
+    "link": "Baca kisah penuh",
+    "galLink": "Terokai warisan kami"
   },
   "formats": {
     "eyebrow": "Format francais",
@@ -133,13 +134,16 @@
     "quoteCite": "Falsafah kebangkitan Saté Ria",
     "leadEyebrow": "Kepimpinan",
     "leadTitle": "Mereka di sebalik kebangkitan",
-    "boName": "Ungku Mohammed Fadli Bin Ungku Jalil",
-    "boRole": "Pemilik Jenama & Resipi Rahsia",
+    "boName": "YM Ungku Mohammed Fadli Bin Ungku Jalil",
+    "boRole": "Pemilik Jenama & Resipi Rahsia (BO)",
     "promoterName": "Dato' Seri Farid Ibrahim",
-    "promoterRole": "Promoter Eksklusif — NNF Global",
+    "promoterRole": "Promoter Eksklusif — dilantik oleh Pemilik Jenama",
     "partnerName": "NNF Global",
     "partnerRole": "Rakan promosi & pengembangan eksklusif",
     "inspired": "Diilhamkan oleh Tun Dr Mahathir Mohamad.",
+    "galEyebrow": "Warisan yang diiktiraf",
+    "galTitle": "Bersama Tun Dr Mahathir Mohamad",
+    "galCaption": "Pertemuan arkib bersama Tun Dr Mahathir Mohamad, 2008.",
     "projEyebrow": "Unjuran kewangan",
     "projTitle": "Ke mana kebangkitan menuju",
     "ctaTitle": "Jadilah sebahagian bab seterusnya",

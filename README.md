@@ -79,9 +79,17 @@ automatically (the placeholder hides itself once the file loads).
 ## Notes
 
 - **Contact** uses `mailto:` links only (pre-filled subjects/bodies) — no backend.
-  Update the address (`info@sateria.com.my`) and phone (`+60 3-XXXX-XXXX`) in
-  `pages/contact.html`, `index.html` footer, and i18n files when finalised.
+  Email `admin@sateria.my`, domain `sateria.my`. Update the phone (`+60 3-XXXX-XXXX`)
+  in `pages/contact.html` and the `index.html` footer when finalised.
 - Grab / ShopeeFood buttons on Contact are placeholders (`href="#"`) — point them at
   real ordering URLs when available.
-- Accessibility: respects `prefers-reduced-motion`, keyboard-navigable, AA-contrast
-  targets, skip link, semantic landmarks.
+- **Brand logo** is `assets/images/logo.png` (header, footer, favicon).
+- **Heritage gallery** on the Heritage page uses real archival photos
+  `assets/images/36–40.jpg` (2008 meeting with Tun Dr Mahathir Mohamad).
+- **Leadership portraits** (`person-bo.jpg`, `person-promoter.jpg`) are still
+  placeholders — drop those files in to replace them, or swap in real photos.
+- **Motion:** animations are intentionally forced ON and ignore the user's
+  `prefers-reduced-motion` setting (per request). To restore the accessible default,
+  flip `reduceMotion` back in `assets/js/app.js` and re-add the reduced-motion media
+  query in `assets/css/main.css` (see the "Motion" banner there).
+- Accessibility: keyboard-navigable, AA-contrast targets, skip link, semantic landmarks.
