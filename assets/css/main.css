@@ -139,13 +139,8 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .site-header__inner { display: flex; align-items: center; gap: var(--space-6); min-height: 72px; }
 
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-size: var(--fs-24); }
-.brand__logo { height: 60px; width: auto; display: block; transition: opacity var(--dur); }
-.footer-logo { height: 78px; width: auto; display: block; }
-
-/* logo swaps with header scroll state: white over the hero, orange on solid */
-.brand__logo--solid { display: none; }
-.site-header.is-scrolled .brand__logo--top { display: none; }
-.site-header.is-scrolled .brand__logo--solid { display: block; }
+.brand__logo { height: 56px; width: auto; display: block; }
+.footer-logo { height: 96px; width: auto; display: block; }
 .brand__mark {
   display: grid; place-items: center; width: 40px; height: 40px;
   background: var(--color-ink); color: var(--color-gold); border-radius: 11px;
