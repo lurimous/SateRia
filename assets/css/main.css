@@ -122,6 +122,13 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
   transition: background var(--dur), box-shadow var(--dur), border-color var(--dur);
   border-bottom: 1px solid transparent;
 }
+/* Legibility scrim over the hero: dark at top, fading to transparent */
+.site-header::before {
+  content: ""; position: absolute; inset: 0 0 -40px 0; pointer-events: none; z-index: -1;
+  background: linear-gradient(to bottom, rgba(15, 13, 11, 0.72), rgba(15, 13, 11, 0.28) 55%, transparent);
+  transition: opacity var(--dur);
+}
+.site-header.is-scrolled::before { opacity: 0; }
 .site-header.is-scrolled {
   background: rgba(250, 247, 242, 0.82);
   backdrop-filter: blur(14px) saturate(140%);
@@ -132,8 +139,13 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .site-header__inner { display: flex; align-items: center; gap: var(--space-6); min-height: 72px; }
 
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-size: var(--fs-24); }
-.brand__logo { height: 46px; width: auto; display: block; }
+.brand__logo { height: 60px; width: auto; display: block; transition: opacity var(--dur); }
 .footer-logo { height: 78px; width: auto; display: block; }
+
+/* logo swaps with header scroll state: white over the hero, orange on solid */
+.brand__logo--solid { display: none; }
+.site-header.is-scrolled .brand__logo--top { display: none; }
+.site-header.is-scrolled .brand__logo--solid { display: block; }
 .brand__mark {
   display: grid; place-items: center; width: 40px; height: 40px;
   background: var(--color-ink); color: var(--color-gold); border-radius: 11px;
@@ -167,7 +179,17 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .lang-toggle__btn.is-active { background: var(--color-ink); color: var(--color-gold-soft); }
 
 .nav-toggle { display: none; width: 44px; height: 44px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
-.nav-toggle span { width: 22px; height: 2px; background: var(--color-ink); border-radius: 2px; transition: transform var(--dur) var(--ease-out), opacity var(--dur); }
+.nav-toggle span { width: 22px; height: 2px; background: var(--color-ink); border-radius: 2px; transition: transform var(--dur) var(--ease-out), opacity var(--dur), background var(--dur); }
+
+/* Over-hero state (transparent header on a dark background) — light controls */
+.site-header:not(.is-scrolled) .nav__link { color: var(--color-fg-on-dark); }
+.site-header:not(.is-scrolled) .nav__link:hover,
+.site-header:not(.is-scrolled) .nav__link.is-active { color: var(--color-gold-soft); }
+.site-header:not(.is-scrolled) .nav__link.is-active::after { background: var(--color-gold-soft); }
+.site-header:not(.is-scrolled) .lang-toggle { background: rgba(255, 255, 255, 0.10); border-color: rgba(255, 255, 255, 0.22); }
+.site-header:not(.is-scrolled) .lang-toggle__btn { color: var(--color-fg-on-dark-mut); }
+.site-header:not(.is-scrolled) .lang-toggle__btn.is-active { background: rgba(0, 0, 0, 0.40); color: var(--color-gold-soft); }
+.site-header:not(.is-scrolled) .nav-toggle span { background: #fff; }
 
 /* ---------- Footer ---------- */
 .site-footer { position: relative; z-index: 2; background: var(--color-ink); color: var(--color-fg-on-dark); padding-top: var(--space-16); }
@@ -183,17 +205,24 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .site-footer__inspired { font-style: italic; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; z-index: 2; overflow: hidden; background: var(--color-ink); color: var(--color-fg-on-dark); }
+.hero {
+  position: relative; z-index: 2; overflow: hidden;
+  background: var(--color-ink); color: var(--color-fg-on-dark);
+  min-height: 100vh; min-height: 100dvh;
+  margin-top: calc(-1 * var(--header-h)); /* slide under the transparent header */
+  display: flex; align-items: center;
+}
 .hero__bg { position: absolute; inset: 0; z-index: 0; }
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    radial-gradient(120% 90% at 78% 18%, rgba(234,88,12,0.30), transparent 55%),
-    radial-gradient(100% 80% at 12% 90%, rgba(200,148,31,0.22), transparent 60%),
-    linear-gradient(180deg, rgba(28,25,23,0.55), rgba(28,25,23,0.92));
+    linear-gradient(to top, rgba(234,88,12,0.55) 0%, rgba(234,88,12,0.18) 28%, transparent 58%),
+    radial-gradient(120% 90% at 78% 18%, rgba(234,88,12,0.26), transparent 55%),
+    radial-gradient(100% 80% at 12% 90%, rgba(200,148,31,0.20), transparent 60%),
+    linear-gradient(180deg, rgba(28,25,23,0.42), rgba(28,25,23,0.82));
 }
 .hero__bg .ph-img { width: 100%; height: 100%; border-radius: 0; }
-.hero__inner { position: relative; z-index: 1; display: grid; gap: var(--space-8); padding-block: clamp(4.5rem, 3rem + 12vw, 9rem); }
+.hero__inner { position: relative; z-index: 1; width: 100%; display: grid; gap: var(--space-8); padding-top: calc(var(--header-h) + var(--space-12)); padding-bottom: var(--space-12); }
 .hero__eyebrow { color: var(--color-gold-soft); }
 .hero__title { font-size: var(--fs-64); max-width: 15ch; }
 .hero__title em { font-style: italic; color: var(--color-gold-soft); }
@@ -365,11 +394,13 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
    bottom of this file to return to the accessible default.
    ========================================================================== */
 
-/* Route container enter — plays on every navigation */
-.route-enter { animation: routeIn 0.55s var(--ease-out) both; }
+/* Route container enter — light opacity fade only (per-element reveals do the
+   motion). Avoid transform/filter here: the container holds the full-screen
+   hero + ken-burns image, and animating blur/scale on it causes flicker. */
+.route-enter { animation: routeIn 0.4s var(--ease-out) both; }
 @keyframes routeIn {
-  from { opacity: 0; transform: translateY(16px) scale(0.995); filter: blur(2px); }
-  to   { opacity: 1; transform: none; filter: none; }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* Hero: slow ken-burns drift + breathing ember glow */
@@ -382,6 +413,13 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 @keyframes emberGlow {
   from { opacity: 0.92; }
   to   { opacity: 1; background-position: 52% 12%, 8% 88%, 0 0; }
+}
+
+/* Hero tagline slides in from the right */
+.hero__sub { animation: slideInRight 0.9s var(--ease-out) 0.35s both; }
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: none; }
 }
 
 /* First-load brand + nav drop-in */
@@ -458,6 +496,12 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
   .nav__link::after { display: none; }
   .nav-toggle { display: flex; }
   .header-cta { display: none; }
+  /* push the actions (lang toggle + burger) to the right; burger is last */
+  .header-actions { margin-left: auto; }
+  /* the dropdown panel is light, so keep links dark even when over the hero */
+  .site-header:not(.is-scrolled) .nav__link { color: var(--color-text); }
+  .site-header:not(.is-scrolled) .nav__link:hover,
+  .site-header:not(.is-scrolled) .nav__link.is-active { color: var(--color-gold-deep); }
   body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
   body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }

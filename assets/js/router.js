@@ -112,13 +112,18 @@
 
   function init() {
     outlet = document.getElementById("main");
-    if (!location.hash) location.replace("#/");
     window.addEventListener("hashchange", render);
     outlet.addEventListener("click", function (e) {
       var retry = e.target.closest("[data-retry]");
       if (retry) { e.preventDefault(); render(); }
     });
-    render();
+    // Render exactly once on load. If there's no hash, set it — the resulting
+    // (async) hashchange drives the single render; otherwise render directly.
+    if (!location.hash || location.hash === "#") {
+      location.hash = "#/";       // fires hashchange -> render()
+    } else {
+      render();
+    }
   }
 
   window.Router = { init: init, navigate: function (p) { location.hash = "#" + p; } };

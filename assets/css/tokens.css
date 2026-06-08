@@ -75,6 +75,7 @@
   --space-28: 7rem;
 
   /* ---- Layout ---- */
+  --header-h:     72px;
   --container:    1200px;
   --container-nar: 820px;
   --gutter:       clamp(1rem, 0.4rem + 2.6vw, 2rem);

@@ -25,14 +25,19 @@
       .catch(function () { /* icons degrade gracefully */ });
   }
 
-  /* ---- Header: condense on scroll ---- */
+  /* ---- Header: transparent only over the home hero, solid otherwise ---- */
+  var headerEl;
+  function updateHeader() {
+    if (!headerEl) return;
+    var overHero = document.body.classList.contains("route-home");
+    var atTop = window.scrollY <= 12;
+    // solid (is-scrolled) everywhere except when sitting on top of the dark hero
+    headerEl.classList.toggle("is-scrolled", !(overHero && atTop));
+  }
   function initHeader() {
-    var header = document.getElementById("site-header");
-    var onScroll = function () {
-      header.classList.toggle("is-scrolled", window.scrollY > 12);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    headerEl = document.getElementById("site-header");
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
   }
 
   /* ---- Mobile nav ---- */
@@ -111,8 +116,11 @@
   }
 
   /* ---- After each route render ---- */
-  document.addEventListener("route:rendered", function () {
+  document.addEventListener("route:rendered", function (e) {
     var main = document.getElementById("main");
+    // mark home so the header knows it sits over a dark hero
+    document.body.classList.toggle("route-home", !!(e.detail && e.detail.path === "/"));
+    updateHeader();
     // restart the container enter animation on every navigation
     main.classList.remove("route-enter");
     void main.offsetWidth; // force reflow so the animation re-triggers
