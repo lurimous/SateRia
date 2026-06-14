@@ -9,7 +9,7 @@
 
   var ROUTES = {
     "/":          { file: "pages/home.html",      title: "Saté Ria — Malaysia's Iconic Satay, Reborn" },
-    "/franchise": { file: "pages/franchise.html", title: "Franchise — Saté Ria" },
+    "/licensed":  { file: "pages/licensed.html", title: "Licensed — Saté Ria" },
     "/about":     { file: "pages/about.html",      title: "Heritage — Saté Ria" },
     "/contact":   { file: "pages/contact.html",   title: "Contact — Saté Ria" }
   };

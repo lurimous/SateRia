@@ -5,10 +5,10 @@
   },
   "nav": {
     "home": "Utama",
-    "franchise": "Francais",
+    "franchise": "Berlesen",
     "about": "Warisan",
     "contact": "Hubungi",
-    "cta": "Jadi francaisi"
+    "cta": "Jadi pemegang lesen"
   },
   "footer": {
     "tagline": "Jenama satay ikonik Malaysia — dilahirkan semula untuk pentas global.",
@@ -21,8 +21,8 @@
   "hero": {
     "eyebrow": "Strategi Kebangkitan 2025–2028",
     "title": "Saté Ria — <em>warisan yang abadi.</em>",
-    "sub": "Sebuah jenama warisan kebangsaan kembali — dibina atas dapur pusat, model francais yang fleksibel, dan aspirasi global.",
-    "ctaPrimary": "Jadi francaisi",
+    "sub": "Sebuah jenama warisan kebangsaan kembali — dibina atas dapur pusat, model pelesenan yang fleksibel, dan aspirasi global.",
+    "ctaPrimary": "Jadi pemegang lesen",
     "ctaSecondary": "Kenali jenama",
     "chip1": "Jenama & resipi rahsia milik sendiri",
     "chip2": "Kehadiran di F1 Grand Prix, Sepang",
@@ -33,7 +33,7 @@
     "title": "Konsep terbukti, direka untuk berkembang",
     "c1Title": "Dapur Pusat",
     "c1Body": "Hab pengeluaran berpiawai membekalkan setiap cawangan dengan satay sedia-beku yang konsisten — setiap cucuk sama rasanya.",
-    "c2Title": "Francais Fleksibel",
+    "c2Title": "Pelesenan Fleksibel",
     "c2Body": "Format trak makanan, kiosk, dan kedai penuh membolehkan pengembangan pantas dan kos rendah di mana-mana lokasi.",
     "c3Title": "Penjenamaan Global",
     "c3Body": "Identiti tempatan dalam bahasa Arab, Mandarin, Hindi, Jepun dan lebih lagi — sedia untuk penempatan rentas sempadan."
@@ -49,7 +49,7 @@
     "galLink": "Terokai warisan kami"
   },
   "formats": {
-    "eyebrow": "Format francais",
+    "eyebrow": "Format pelesenan",
     "title": "Satu jenama, tiga cara untuk bermula",
     "t1": "Trak Makanan",
     "t1d": "Unit bergerak untuk acara, festival, dan zon tepi jalan bertrafik tinggi. Kos tetap rendah, keterlihatan tinggi.",
@@ -62,7 +62,7 @@
   "stats": {
     "eyebrow": "Aspirasi 2028",
     "title": "Angka yang menjadi tunjang kebangkitan",
-    "s1": "Cawangan francais menjelang 2027",
+    "s1": "Cawangan berlesen menjelang 2027",
     "s2": "Pengeluaran dapur pusat / bulan",
     "s3": "Unjuran hasil, 2027",
     "s4": "Pasaran disasar menjelang 2028"
@@ -70,14 +70,14 @@
   "cta": {
     "eyebrow": "Dibuka sekarang",
     "title": "Sertai kebangkitan Saté Ria",
-    "body": "Peluang francais merentas semua format, perkongsian bekalan dapur pusat, dan pelaburan strategik untuk pengembangan antarabangsa.",
-    "primary": "Tanya tentang francais",
+    "body": "Peluang pelesenan merentas semua format, perkongsian bekalan dapur pusat, dan pelaburan strategik untuk pengembangan antarabangsa.",
+    "primary": "Tanya tentang lesen",
     "secondary": "Terokai model"
   },
   "fr": {
-    "eyebrow": "Francais & pelaburan",
+    "eyebrow": "Pelesenan & pelaburan",
     "title": "Miliki sebahagian ikon kebangsaan",
-    "sub": "Model bekalan dapur pusat memastikan kualiti konsisten dan operasi cawangan ringkas — supaya francaisi boleh fokus pada pertumbuhan dari hari pertama.",
+    "sub": "Model bekalan dapur pusat memastikan kualiti konsisten dan operasi cawangan ringkas — supaya pemegang lesen boleh fokus pada pertumbuhan dari hari pertama.",
     "flowEyebrow": "Model dapur pusat",
     "flowTitle": "Dari bahan mentah ke cawangan anda",
     "step1": "Bahan Mentah", "step1d": "Diperoleh & disemak kualiti",
@@ -86,7 +86,7 @@
     "step4": "Edaran", "step4d": "Rantaian sejuk ke cawangan",
     "step5": "Cawangan Anda", "step5d": "Bakar, hidang, untung",
     "why1": "Rasa konsisten di setiap cawangan — tiada perapan atau penyediaan di tapak",
-    "why2": "Edaran beku memanjangkan jangka hayat dan mengurangkan pembaziran francaisi",
+    "why2": "Edaran beku memanjangkan jangka hayat dan mengurangkan pembaziran pemegang lesen",
     "why3": "Boleh dikembangkan ke bekalan kebangsaan dari satu kemudahan bertauliah",
     "fmtEyebrow": "Tiga format penempatan",
     "fmtTitle": "Pilih jejak yang sesuai",
@@ -98,6 +98,11 @@
     "roiTruck": "12–18 bulan",
     "roiKiosk": "10–14 bulan",
     "roiOutlet": "18–24 bulan",
+    "tdEyebrow": "Format dalam 3D",
+    "tdTitle": "Terokai setiap format",
+    "tdBody": "Seret mana-mana model untuk memutarnya — dari kedai penuh unggulan hinggalah kiosk dan trak makanan.",
+    "tdLoading": "Memuatkan model 3D…",
+    "tdHint": "Seret untuk putar",
     "gtmEyebrow": "Pelan strategi pasaran",
     "gtmTitle": "Laluan berfasa menuju global",
     "phase1": "Fasa 1", "phase1when": "2025 — Kebangkitan Domestik",
@@ -113,8 +118,8 @@
     "p3b": "Sasarkan ASEAN: Singapura, Brunei, Indonesia, dan Thailand",
     "p3c": "Lesenkan model tempatan untuk Korea & Jepun; pek runcit beku untuk GCC",
     "ctaTitle": "Sedia bincang angka?",
-    "ctaBody": "Beritahu kami format dan lokasi pilihan anda. Kami akan kongsi pakej francais dan laluan pembukaan.",
-    "ctaBtn": "Mulakan pertanyaan francais"
+    "ctaBody": "Beritahu kami format dan lokasi pilihan anda. Kami akan kongsi pakej pelesenan dan laluan pembukaan.",
+    "ctaBtn": "Mulakan pertanyaan pelesenan"
   },
   "ab": {
     "eyebrow": "Warisan & visi",
@@ -147,15 +152,15 @@
     "projEyebrow": "Unjuran kewangan",
     "projTitle": "Ke mana kebangkitan menuju",
     "ctaTitle": "Jadilah sebahagian bab seterusnya",
-    "ctaBody": "Francaisi, rakan bekalan, dan pelabur strategik semuanya dialu-alukan ketika Saté Ria berkembang di dalam dan luar negara.",
+    "ctaBody": "Pemegang lesen, rakan bekalan, dan pelabur strategik semuanya dialu-alukan ketika Saté Ria berkembang di dalam dan luar negara.",
     "ctaBtn": "Hubungi kami",
-    "ctaBtn2": "Lihat model francais"
+    "ctaBtn2": "Lihat model pelesenan"
   },
   "ct": {
     "eyebrow": "Hubungi kami",
     "title": "Mari nyalakan sesuatu bersama",
     "sub": "Sama ada anda mahu membuka cawangan, membekal dapur pusat, atau melabur dalam pengembangan global — mulakan perbualan di bawah.",
-    "franchiseTitle": "Pertanyaan francais",
+    "franchiseTitle": "Pertanyaan pelesenan",
     "franchiseDesc": "Buka Trak Makanan, Kiosk, atau Kedai Penuh",
     "supplyTitle": "Perkongsian bekalan",
     "supplyDesc": "Jadi rakan bekalan dapur pusat",

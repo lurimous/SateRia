@@ -3,9 +3,9 @@
 <!-- ===== Page intro ===== -->
 <section class="section section--tight">
   <div class="container container--narrow center">
-    <p class="eyebrow" data-reveal style="justify-content:center" data-i18n="fr.eyebrow">Franchise &amp; investment</p>
+    <p class="eyebrow" data-reveal style="justify-content:center" data-i18n="fr.eyebrow">Licensing &amp; investment</p>
     <h1 class="h-xl" data-reveal data-delay="1" data-i18n="fr.title">Own a piece of a national icon</h1>
-    <p class="lead" data-reveal data-delay="2" style="margin-top: var(--space-4)" data-i18n="fr.sub">A central-kitchen supply model keeps quality consistent and outlet operations simple — so franchisees can focus on growth from day one.</p>
+    <p class="lead" data-reveal data-delay="2" style="margin-top: var(--space-4)" data-i18n="fr.sub">A central-kitchen supply model keeps quality consistent and outlet operations simple — so licensees can focus on growth from day one.</p>
   </div>
 </section>
 
@@ -25,7 +25,7 @@
     </div>
     <ul class="check-list" style="margin-top: var(--space-10); max-width: 60rem;">
       <li data-reveal><svg aria-hidden="true"><use href="#icon-check"></use></svg><span data-i18n="fr.why1">Consistent taste across every outlet — no marinating or prep on site</span></li>
-      <li data-reveal data-delay="1"><svg aria-hidden="true"><use href="#icon-check"></use></svg><span data-i18n="fr.why2">Frozen distribution extends shelf life and cuts franchisee waste</span></li>
+      <li data-reveal data-delay="1"><svg aria-hidden="true"><use href="#icon-check"></use></svg><span data-i18n="fr.why2">Frozen distribution extends shelf life and cuts licensee waste</span></li>
       <li data-reveal data-delay="2"><svg aria-hidden="true"><use href="#icon-check"></use></svg><span data-i18n="fr.why3">Scalable to national supply from a single certified facility</span></li>
     </ul>
   </div>
@@ -85,13 +85,84 @@
           <div class="format-card__head"><h3 data-i18n="formats.t3">Full Outlet</h3><span class="tag" data-i18n="fr.tagOutlet">Standalone / Drive-Thru</span></div>
           <p class="muted" data-i18n="formats.t3d">Flagship dine-in and drive-thru store with the full menu and hot-pack take-away.</p>
           <dl class="spec-list">
-            <div><dt data-i18n="fr.invest">Investment</dt><dd>RM 150K–250K</dd></div>
+            <div><dt data-i18n="fr.invest">Investment</dt><dd>RM 380K</dd></div>
             <div><dt data-i18n="fr.roi">ROI target</dt><dd data-i18n="fr.roiOutlet">18–24 months</dd></div>
           </dl>
         </div>
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- ===== 3D formats showcase ===== -->
+<section class="section section--dark section--tight">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <p class="eyebrow" data-reveal data-i18n="fr.tdEyebrow">The formats in 3D</p>
+      <h2 class="h-lg" data-reveal data-delay="1" data-i18n="fr.tdTitle">Explore every format</h2>
+      <p class="lead" data-reveal data-delay="2" data-i18n="fr.tdBody">Drag any model to rotate it — from the flagship outlet down to the kiosk and food truck.</p>
+    </div>
+
+    <!-- Featured: full outlet -->
+    <figure class="model-stage model-stage--feature" data-reveal>
+      <model-viewer class="model3d" src="assets/3d/outlet.glb?v=3"
+        alt="Interactive 3D model of the Saté Ria full outlet"
+        camera-controls disable-zoom disable-pan touch-action="pan-y" auto-rotate auto-rotate-delay="500"
+        rotation-per-second="18deg" interaction-prompt="none"
+        shadow-intensity="1" shadow-softness="0.8" exposure="0.82" tone-mapping="aces" environment-image="neutral"
+        camera-orbit="30deg 76deg 105%" loading="lazy" reveal="auto">
+        <div class="mv-poster" slot="poster">
+          <svg aria-hidden="true"><use href="#icon-store"></use></svg>
+          <span data-i18n="fr.tdLoading">Loading 3D model…</span>
+        </div>
+      </model-viewer>
+      <figcaption class="model-cap">
+        <span class="model-cap__name" data-i18n="formats.t3">Full Outlet</span>
+        <span class="tag" data-i18n="fr.tagOutlet">Standalone / Drive-Thru</span>
+      </figcaption>
+    </figure>
+
+    <!-- Bottom row: truck + kiosk -->
+    <div class="model-grid">
+      <figure class="model-stage" data-reveal>
+        <model-viewer class="model3d" src="assets/3d/truck.glb?v=3"
+          alt="Interactive 3D model of the Saté Ria food truck"
+          camera-controls disable-zoom disable-pan touch-action="pan-y" auto-rotate auto-rotate-delay="500"
+          rotation-per-second="20deg" interaction-prompt="none"
+          shadow-intensity="1" shadow-softness="0.8" exposure="0.82" tone-mapping="aces" environment-image="neutral"
+          camera-orbit="30deg 76deg 110%" loading="lazy" reveal="auto">
+          <div class="mv-poster" slot="poster">
+            <svg aria-hidden="true"><use href="#icon-truck"></use></svg>
+            <span data-i18n="fr.tdLoading">Loading 3D model…</span>
+          </div>
+        </model-viewer>
+        <figcaption class="model-cap">
+          <span class="model-cap__name" data-i18n="formats.t1">Food Truck</span>
+          <span class="tag" data-i18n="fr.tagTruck">Mobile / Events</span>
+        </figcaption>
+      </figure>
+
+      <figure class="model-stage" data-reveal data-delay="1">
+        <model-viewer class="model3d" src="assets/3d/kiosk.glb?v=3"
+          alt="Interactive 3D model of the Saté Ria kiosk"
+          camera-controls disable-zoom disable-pan touch-action="pan-y" auto-rotate auto-rotate-delay="500"
+          rotation-per-second="20deg" interaction-prompt="none"
+          shadow-intensity="1" shadow-softness="0.8" exposure="0.82" tone-mapping="aces" environment-image="neutral"
+          camera-orbit="30deg 76deg 110%" loading="lazy" reveal="auto">
+          <div class="mv-poster" slot="poster">
+            <svg aria-hidden="true"><use href="#icon-kiosk"></use></svg>
+            <span data-i18n="fr.tdLoading">Loading 3D model…</span>
+          </div>
+        </model-viewer>
+        <figcaption class="model-cap">
+          <span class="model-cap__name" data-i18n="formats.t2">Kiosk</span>
+          <span class="tag" data-i18n="fr.tagKiosk">Food courts / Malls</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="truck-hint" data-reveal data-i18n="fr.tdHint">Drag to rotate · scroll to zoom</p>
   </div>
 </section>
 
@@ -148,9 +219,9 @@
 <section class="cta-band">
   <div class="container container--narrow cta-band__inner">
     <h2 class="h-lg" data-reveal data-i18n="fr.ctaTitle">Ready to talk numbers?</h2>
-    <p class="lead" data-reveal data-delay="1" data-i18n="fr.ctaBody">Tell us your preferred format and location. We'll share the franchise pack and the path to opening.</p>
+    <p class="lead" data-reveal data-delay="1" data-i18n="fr.ctaBody">Tell us your preferred format and location. We'll share the licensing pack and the path to opening.</p>
     <div class="btn-row" data-reveal data-delay="2">
-      <a class="btn btn--gold" href="#/contact" data-i18n="fr.ctaBtn">Start a franchise enquiry
+      <a class="btn btn--gold" href="#/contact" data-i18n="fr.ctaBtn">Start a licensing enquiry
         <svg class="arrow" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
     </div>
   </div>

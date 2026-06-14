@@ -122,7 +122,7 @@ Derived from the ui-ux-pro-max design database (restaurant/heritage + premium bl
 2. Three format cards w/ investment + ROI:
    - Food Truck — RM 80K–120K — ROI 12–18 mo
    - Kiosk (+drive-thru) — RM 40K–70K — ROI 10–14 mo
-   - Full Outlet — RM 150K–250K — ROI 18–24 mo
+   - Full Outlet — RM 380K — ROI 18–24 mo
 3. Go-to-market phases — 2025 Domestic Revival / 2026–27 National Scale / 2028 International.
 4. CTA → Contact.
 

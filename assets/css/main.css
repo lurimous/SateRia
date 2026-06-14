@@ -285,6 +285,32 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
 .spec-list dt { color: var(--color-text-muted); }
 .spec-list dd { font-weight: 700; font-variant-numeric: tabular-nums; }
 
+/* ---------- 3D wireframe viewers ---------- */
+.model-stage { margin: 0; }
+.model3d {
+  position: relative;
+  width: 100%; height: min(46vh, 400px); display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-on-dark);
+  background:
+    radial-gradient(120% 90% at 50% 18%, rgba(234,88,12,0.18), transparent 60%),
+    radial-gradient(80% 70% at 50% 110%, rgba(200,148,31,0.16), transparent 60%),
+    linear-gradient(180deg, #211c18, #16120f);
+  overflow: hidden;
+  --poster-color: transparent;
+  --progress-bar-color: var(--color-gold);
+  --progress-mask: transparent;
+}
+.model-stage--feature .model3d { height: min(68vh, 580px); }
+.model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-6); }
+.model-cap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: var(--space-3); }
+.model-cap__name { font-family: var(--font-display); font-size: var(--fs-20); color: var(--color-gold-soft); }
+.mv-poster { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: var(--space-3); color: var(--color-gold-soft); }
+.mv-poster svg { width: 56px; height: 56px; opacity: 0.7; animation: floaty 2.4s var(--ease-out) infinite alternate; }
+.mv-poster span { font-size: var(--fs-14); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-fg-on-dark-mut); }
+@keyframes floaty { from { transform: translateY(-4px); } to { transform: translateY(4px); } }
+.truck-hint { margin-top: var(--space-4); text-align: center; font-size: var(--fs-14); color: var(--color-fg-on-dark-mut); }
+
 /* ---------- Process flow (central kitchen) ---------- */
 .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); align-items: stretch; }
 .flow__step { position: relative; text-align: center; padding: var(--space-6) var(--space-3); background: var(--color-surface-raised); border: 1px solid var(--color-border); border-radius: var(--radius); }
@@ -506,6 +532,7 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; line-
   .split--reverse .split__media { order: 0; }
   .people { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
   .phase { grid-template-columns: 1fr; gap: var(--space-4); }
+  .model-grid { grid-template-columns: 1fr; }
   .site-footer__inner { grid-template-columns: 1fr; gap: var(--space-8); }
 }
 

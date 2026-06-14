@@ -5,10 +5,10 @@
   },
   "nav": {
     "home": "Home",
-    "franchise": "Franchise",
+    "franchise": "Licensed",
     "about": "Heritage",
     "contact": "Contact",
-    "cta": "Franchise with us"
+    "cta": "Become a licensee"
   },
   "footer": {
     "tagline": "Malaysia's iconic satay brand — reborn for a global table.",
@@ -21,8 +21,8 @@
   "hero": {
     "eyebrow": "Revival Strategy 2025–2028",
     "title": "Saté Ria — <em>a timeless legacy.</em>",
-    "sub": "A national heritage brand returns — built on a central kitchen, a versatile franchise model, and global ambition.",
-    "ctaPrimary": "Become a franchisee",
+    "sub": "A national heritage brand returns — built on a central kitchen, a versatile licensing model, and global ambition.",
+    "ctaPrimary": "Become a licensee",
     "ctaSecondary": "Discover the brand",
     "chip1": "Owned brand & secret recipe",
     "chip2": "F1 Grand Prix, Sepang presence",
@@ -33,7 +33,7 @@
     "title": "A proven concept, engineered to scale",
     "c1Title": "Central Kitchen",
     "c1Body": "A standardized production hub supplying every outlet with consistent, frozen-ready satay — every stick tastes the same.",
-    "c2Title": "Versatile Franchise",
+    "c2Title": "Versatile Licensing",
     "c2Body": "Food truck, kiosk, and full-outlet formats enable rapid, low-cost expansion across any location and footfall.",
     "c3Title": "Global Branding",
     "c3Body": "Localized identities in Arabic, Mandarin, Hindi, Japanese and more — ready for cross-border deployment."
@@ -49,7 +49,7 @@
     "galLink": "Explore our heritage"
   },
   "formats": {
-    "eyebrow": "Franchise formats",
+    "eyebrow": "Licensing formats",
     "title": "One brand, three ways to enter",
     "t1": "Food Truck",
     "t1d": "Mobile unit for events, festivals, and high-traffic roadside zones. Low fixed cost, high visibility.",
@@ -62,7 +62,7 @@
   "stats": {
     "eyebrow": "The 2028 ambition",
     "title": "Numbers that anchor the revival",
-    "s1": "Franchise outlets by 2027",
+    "s1": "Licensed outlets by 2027",
     "s2": "Central kitchen output / month",
     "s3": "Projected revenue, 2027",
     "s4": "Markets targeted by 2028"
@@ -70,14 +70,14 @@
   "cta": {
     "eyebrow": "Open now",
     "title": "Join the Saté Ria revival",
-    "body": "Franchise opportunities across all formats, central-kitchen supply partnerships, and strategic investment for international expansion.",
-    "primary": "Enquire about a franchise",
+    "body": "Licensing opportunities across all formats, central-kitchen supply partnerships, and strategic investment for international expansion.",
+    "primary": "Enquire about a licence",
     "secondary": "Explore the model"
   },
   "fr": {
-    "eyebrow": "Franchise & investment",
+    "eyebrow": "Licensing & investment",
     "title": "Own a piece of a national icon",
-    "sub": "A central-kitchen supply model keeps quality consistent and outlet operations simple — so franchisees can focus on growth from day one.",
+    "sub": "A central-kitchen supply model keeps quality consistent and outlet operations simple — so licensees can focus on growth from day one.",
     "flowEyebrow": "Central kitchen model",
     "flowTitle": "From raw material to your outlet",
     "step1": "Raw Material", "step1d": "Sourced & quality-checked",
@@ -86,7 +86,7 @@
     "step4": "Distribute", "step4d": "Cold-chain to outlets",
     "step5": "Your Outlet", "step5d": "Grill, serve, profit",
     "why1": "Consistent taste across every outlet — no marinating or prep on site",
-    "why2": "Frozen distribution extends shelf life and cuts franchisee waste",
+    "why2": "Frozen distribution extends shelf life and cuts licensee waste",
     "why3": "Scalable to national supply from a single certified facility",
     "fmtEyebrow": "Three deployment formats",
     "fmtTitle": "Pick the footprint that fits",
@@ -98,6 +98,11 @@
     "roiTruck": "12–18 months",
     "roiKiosk": "10–14 months",
     "roiOutlet": "18–24 months",
+    "tdEyebrow": "The formats in 3D",
+    "tdTitle": "Explore every format",
+    "tdBody": "Drag any model to rotate it — from the flagship outlet down to the kiosk and food truck.",
+    "tdLoading": "Loading 3D model…",
+    "tdHint": "Drag to rotate",
     "gtmEyebrow": "Go-to-market roadmap",
     "gtmTitle": "A phased path to going global",
     "phase1": "Phase 1", "phase1when": "2025 — Domestic Revival",
@@ -113,8 +118,8 @@
     "p3b": "Target ASEAN: Singapore, Brunei, Indonesia, and Thailand",
     "p3c": "License localized models for Korea & Japan; frozen retail packs for GCC",
     "ctaTitle": "Ready to talk numbers?",
-    "ctaBody": "Tell us your preferred format and location. We'll share the franchise pack and the path to opening.",
-    "ctaBtn": "Start a franchise enquiry"
+    "ctaBody": "Tell us your preferred format and location. We'll share the licensing pack and the path to opening.",
+    "ctaBtn": "Start a licensing enquiry"
   },
   "ab": {
     "eyebrow": "Heritage & vision",
@@ -147,15 +152,15 @@
     "projEyebrow": "Financial projections",
     "projTitle": "Where the revival is headed",
     "ctaTitle": "Be part of the next chapter",
-    "ctaBody": "Franchisees, supply partners, and strategic investors are all welcome as Saté Ria scales nationally and abroad.",
+    "ctaBody": "Licensees, supply partners, and strategic investors are all welcome as Saté Ria scales nationally and abroad.",
     "ctaBtn": "Get in touch",
-    "ctaBtn2": "See the franchise model"
+    "ctaBtn2": "See the licensing model"
   },
   "ct": {
     "eyebrow": "Get in touch",
     "title": "Let's fire up something together",
     "sub": "Whether you want to open an outlet, supply the central kitchen, or invest in the global rollout — start a conversation below.",
-    "franchiseTitle": "Franchise enquiry",
+    "franchiseTitle": "Licensing enquiry",
     "franchiseDesc": "Open a Food Truck, Kiosk, or Full Outlet",
     "supplyTitle": "Supply partnership",
     "supplyDesc": "Become a central-kitchen supply partner",
